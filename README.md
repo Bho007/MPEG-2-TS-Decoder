@@ -1,9 +1,10 @@
 # MPEG-2 TS Video Decoder
+**Created by Ailin Saggau-Lyons and Bhavesh Singhal under the supervision of Robert Xiao for CPSC 448B.**
 
-This is a simple MPEG-2 TS video decoder that works with a single TS stream video file. The decoder allows the user to set a destination folder where they can store all the decoded frames.
+This is a simple MPEG-2 TS video decoder that works with a single TS stream video file. The decoder allows the user to
+set a destination folder where they can store all the decoded frames of a desired input file.
 
-Created by Ailin Saggau-Lyons and Bhavesh Singhal under the supervision of Robert Xiao for CPSC 448B.
-
+To compile, run the cmake program with the CMakeLists.txt in the project-code directory.
 
 ### Bugs/Problems
 
