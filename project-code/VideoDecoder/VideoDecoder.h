@@ -46,7 +46,7 @@ public:
 
     cimg_library::CImg<int>** decodeToArray(const char* source);
 
-    void decodeToFile(char *source, char *destination);
+    void decodeToFile(const char *source, const char *destination);
 
     void loadExtensionUserData(unsigned char i);
 

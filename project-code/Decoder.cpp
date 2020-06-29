@@ -21,14 +21,16 @@
  *         display and parse separately
 */
 
-int main(int argc, char **argv) {
+int main() {
     clock_t t = clock();
     try {
-        char relative_path[] = R"(../../testFiles/testvideo.ts)";
-        char destination[] = R"(../../test output/)"; //TODO clear destination folder before running the program
+        std::string relative_path, destination;
+        std::cout << "Enter the relative path of the file to be decoded - ";
+        std::cin >> relative_path;
+        std::cout << "Enter the relative path of the folder to store the output frames - ";
+        std::cin >> destination; //TODO clear destination folder before running the program
         VideoDecoder *vDecoder = VideoDecoder::getInstance();
-        vDecoder->decodeToFile(relative_path, destination);
-
+        vDecoder->decodeToFile(relative_path.c_str(), destination.c_str());
     } catch (PacketException &e) {
         printf("Gracefully shutting down after %f seconds.\n%s", ((float) (clock() - t)) / CLOCKS_PER_SEC, e.what());
     } catch (VideoException &e) {

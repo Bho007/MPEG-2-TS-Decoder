@@ -24,7 +24,7 @@ VideoDecoder::VideoDecoder() {
     pngSequenceNumber = 0;
 }
 
-void VideoDecoder::decodeToFile(char *source, char *destination) {
+void VideoDecoder::decodeToFile(const char *source, const char *destination) {
     pngSequenceNumber = 0;
     pictureDecoder = new PictureDecoder();
     loadFile(source);
